@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package calculator.v1;
+option go_package = "github.com/yinhuaz/ex_project/gen/calculator/v1;calculatorv1";
+
+service CalculatorService {
+  rpc Add(AddRequest) returns (AddResponse) {}
+  rpc Subtract(SubtractRequest) returns (SubtractResponse) {}
+  rpc Multiply(MultiplyRequest) returns (MultiplyResponse) {}
+  rpc Divide(DivideRequest) returns (DivideResponse) {}
+}
+
+message AddRequest {
+  double a = 1;
+  double b = 2;
+}
+
+message AddResponse {
+  double result = 1;
+}
+
+message SubtractRequest {
+  double a = 1;
+  double b = 2;
+}
+
+message SubtractResponse {
+  double result = 1;
+}
+
+message MultiplyRequest {
+  double a = 1;
+  double b = 2;
+}
+
+message MultiplyResponse {
+  double result = 1;
+}
+
+message DivideRequest {
+  double a = 1;
+  double b = 2;
+}
+
+message DivideResponse {
+  double result = 1;
+}
